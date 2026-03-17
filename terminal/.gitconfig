@@ -1,0 +1,14 @@
+[credential]
+	helper = osxkeychain
+[user]
+	name = Anand Sampat
+	email = anands@cs.stanford.edu
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[core]
+	excludesfile = ~/.gitignore_global
+[init]
+	defaultBranch = main
