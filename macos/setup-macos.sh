@@ -39,6 +39,7 @@ FORMULAE=(
     wget
     gh
     tmux
+    docker-compose
 )
 
 for formula in "${FORMULAE[@]}"; do
