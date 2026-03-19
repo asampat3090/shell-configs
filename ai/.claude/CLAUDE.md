@@ -25,3 +25,10 @@
 - Use git for version control
 - Prefer conventional commits (feat:, fix:, chore:, etc.)
 - Keep PRs focused and reviewable
+
+## General Engineering Approach (Iterative, where applicable) 
+1. Make the requirements less dumb
+2. Delete a part or process step. Repeat consistently. If you're not adding things back 10% of the time you're not deleting enough.
+3. Simplify or  optimize the process or approach 
+4. Accelerate cycle time. Moving to slowly, go faster
+5. Automate the process.
