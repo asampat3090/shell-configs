@@ -71,14 +71,20 @@ done
 
 # --- iTerm2 settings ---
 
+log "Configuring iTerm2..."
+
 ITERM2_PREFS_DIR="$REPO_DIR/terminal/iterm2"
 ITERM2_PLIST="$ITERM2_PREFS_DIR/com.googlecode.iterm2.plist"
 
+if [ ! -d "/Applications/iTerm.app" ] && ! brew list --cask iterm2 &>/dev/null; then
+    warn "iTerm2 is not installed — settings will be pre-configured so they apply on first launch"
+    warn "To install manually: brew install --cask iterm2"
+fi
+
 if [ -f "$ITERM2_PLIST" ]; then
-    log "Configuring iTerm2 to load preferences from repo..."
     defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$ITERM2_PREFS_DIR"
     defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
-    ok "iTerm2 will load settings from $ITERM2_PREFS_DIR"
+    ok "iTerm2 preferences pointed at $ITERM2_PREFS_DIR"
 else
     warn "No iTerm2 plist found at $ITERM2_PLIST"
     warn "Export settings from your other machine first: ./terminal/iterm2/export-settings.sh"
