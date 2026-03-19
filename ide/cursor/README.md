@@ -18,8 +18,21 @@ If not available, open Cursor and run the command palette (`Cmd+Shift+P`) > "Ins
 
 ## Configuration
 
-Cursor stores its config in `~/.cursor/`. The setup script symlinks relevant
-config from this repo.
+Cursor stores config in two locations:
+
+- **`~/.cursor/`** — dot-cursor home directory (argv, gitignore)
+- **`~/Library/Application Support/Cursor/User/`** — editor settings & keybindings
+
+The setup script symlinks config from this repo into both locations.
+
+### Files stored in this repo
+
+| File | Symlinked to | Purpose |
+|------|-------------|---------|
+| `settings.json` | `~/Library/Application Support/Cursor/User/settings.json` | Editor, formatter, theme settings |
+| `keybindings.json` | `~/Library/Application Support/Cursor/User/keybindings.json` | Custom keyboard shortcuts |
+| `argv.json` | `~/.cursor/argv.json` | Startup arguments (crash reporter, hardware accel) |
+| `dot-cursor-gitignore` | `~/.cursor/.gitignore` | Controls what Cursor tracks in ~/.cursor |
 
 ## Extensions
 

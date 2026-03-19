@@ -1,0 +1,45 @@
+{
+    "editor.inlineSuggest.enabled": true,
+    "python.defaultInterpreterPath": "/usr/bin/python3",
+    "files.autoSave": "onFocusChange",
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": true,
+        "markdown": true,
+        "scminput": false,
+        "yaml": false
+    },
+    "editor.rulers": [
+        58,
+        80
+    ],
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnType": true,
+        "editor.formatOnSave": true
+    },
+    "github.copilot.advanced": {},
+    "remote.SSH.remoteServerListenOnSocket": true,
+    "terminal.integrated.inheritEnv": false,
+    "remote.SSH.remotePlatform": {
+        "150.136.146.212": "linux",
+        "pytorch-gpu-vm.us-east1-c.opspro-ai": "linux"
+    },
+    "continue.enableTabAutocomplete": true,
+    "interactiveWindow.executeWithShiftEnter": true,
+    "editor.definitionLinkOpensInPeek": true,
+    "cursor.cpp.disabledLanguages": [
+        "scminput",
+        "yaml"
+    ],
+    "editor.wordWrap": "on",
+    "geminicodeassist.project": "",
+    "jupyter.askForKernelRestart": false,
+    "geminicodeassist.displayInlineContextHint": false,
+    "jupyter.widgetScriptSources": [
+        "jsdelivr.com",
+        "unpkg.com"
+    ],
+    "claudeCode.preferredLocation": "panel",
+    "claudeCode.useTerminal": true
+}

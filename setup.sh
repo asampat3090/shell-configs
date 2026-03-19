@@ -173,6 +173,16 @@ else
     warn "Cursor must be downloaded from cursor.com (no Homebrew cask available)"
 fi
 
+log "Setting up Cursor config..."
+
+CURSOR_USER_DIR="$HOME/Library/Application Support/Cursor/User"
+mkdir -p "$CURSOR_USER_DIR"
+
+backup_and_link "$REPO_DIR/ide/cursor/settings.json"          "$CURSOR_USER_DIR/settings.json"
+backup_and_link "$REPO_DIR/ide/cursor/keybindings.json"       "$CURSOR_USER_DIR/keybindings.json"
+backup_and_link "$REPO_DIR/ide/cursor/argv.json"              "$HOME/.cursor/argv.json"
+backup_and_link "$REPO_DIR/ide/cursor/dot-cursor-gitignore"   "$HOME/.cursor/.gitignore"
+
 # --- 8. IDE: VS Code ---
 
 log "Checking VS Code..."
