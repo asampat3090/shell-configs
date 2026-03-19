@@ -36,7 +36,11 @@ shell-configs/
 │   ├── .vimrc              # Vim config
 │   ├── .vim/               # Vim plugins/runtime
 │   ├── .gitconfig          # Git identity & settings
-│   └── .gitignore_global   # Global gitignore
+│   ├── .gitignore_global   # Global gitignore
+│   └── iterm2/
+│       ├── README.md               # iTerm2 export/import guide
+│       ├── export-settings.sh      # Export iTerm2 prefs to this folder
+│       └── com.googlecode.iterm2.plist  # (generated) iTerm2 settings
 ├── ide/
 │   ├── cursor/
 │   │   └── README.md       # Cursor install & setup guide
@@ -62,5 +66,6 @@ chmod +x macos/setup-macos.sh
 ```
 
 Installs extra tools (`jq`, `ripgrep`, `fzf`, `gh`, `tmux`, etc.), cask apps
-(`iTerm2`, `Rectangle`, `Docker`), developer fonts, and sets sensible macOS
+(`iTerm2`, `Rectangle`, `Docker`), configures iTerm2 to load saved preferences
+from the repo, installs developer fonts, and sets sensible macOS
 Finder/Dock/keyboard defaults.
