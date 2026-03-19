@@ -81,6 +81,12 @@ if [ ! -d "/Applications/iTerm.app" ] && ! brew list --cask iterm2 &>/dev/null; 
     warn "To install manually: brew install --cask iterm2"
 fi
 
+if pgrep -x iTerm2 &>/dev/null; then
+    warn "iTerm2 is running — quitting it so preferences can be written safely"
+    killall iTerm2 2>/dev/null || true
+    sleep 2
+fi
+
 if [ -f "$ITERM2_PLIST" ]; then
     defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$ITERM2_PREFS_DIR"
     defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
